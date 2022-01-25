@@ -1,4 +1,4 @@
-# Foobar
+# API Key Generator
 
 This is a basic program made out of frustration. Have you ever thought man i need more api keys for opensea? Here is your answer
 
