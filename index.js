@@ -9,7 +9,7 @@ let counter = 1;
 async function scrape() {
   try {
     console.log(colors.green("[+] Starting Automation"));
-    puppeteer.launch({ headless: false }).then(async (browser) => {
+    puppeteer.launch({ headless: true }).then(async (browser) => {
       const page = await browser.newPage();
       await page.goto(
         "https://docs.google.com/forms/d/e/1FAIpQLScC_p4RrldpdTq-zSLXrYtyqRhMDU9oCKx-eAq_9kHbj68C8g/viewform?embedded=true",
@@ -61,7 +61,7 @@ async function scrape() {
 
       console.log(
         colors.green(
-          `[+] Submitted Form (${counter}/${config["amount-to-send"]})`
+          `[+] Submitted Form (${counter - 1}/${config["amount-to-send"]})`
         )
       );
       console.log(colors.green("[+] Closing Browser"));
